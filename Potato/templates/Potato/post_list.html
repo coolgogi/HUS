@@ -1,0 +1,42 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'board2/style.css' %}">
+<html>
+<head>
+    <title>게시판</title>
+</head>
+<body>
+        {% if post_list %}
+        <table>
+            <thead>
+                <tr>            
+                    <th>
+                        번호
+                    </th>
+                    <th>
+                        제목
+                    </th>
+                    <th>
+                        작성자
+                    </th>
+                    <th>
+                        작성 날짜
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                    {% for post in post_list %}
+                    <tr>
+                        <th>{{post.pk}}</th>
+                        <td><a href="{% url 'board2:postDetail' post.pk %}">{{post.title}}</a></td>
+                        <td>{{post.writer}}</td>
+                        <td>{{post.pub_date}}</td>
+                    </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No posting available</p>
+    {% endif %}
+    <button class="fixed"><a href="{% url 'board2:postCreate' %}">작성</a></button>
+</body>
+</html>

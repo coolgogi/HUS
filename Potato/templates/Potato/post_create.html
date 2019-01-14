@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>게시물 작성</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'board2/style.css' %}">
+    </head>
+    <body>
+        <h1>This is a writing page</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+                    {{ form.as_table }}
+            </table>
+            <input class="fixed submit" type="Submit" value="Submit">
+        </form>
+    </body>
+</html>

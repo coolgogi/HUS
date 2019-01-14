@@ -1,0 +1,5 @@
+<form action = '.' method = 'POST'>
+    {% csrf_token %}
+    <h1>{{ object.title }} 을 삭제합니다.</h1>
+    <p><input type= 'submit' value='확인'/><a href='../'>취소</a></p>
+</form>

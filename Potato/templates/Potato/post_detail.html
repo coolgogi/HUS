@@ -1,0 +1,7 @@
+<h1>{{object.title}}</h1>
+<div>Writer: {{object.writer}}</div>
+<div>Published: {{object.pub_date}}</div>
+<div>Content: {{object.contents}}</div>
+<button><a href="{% url 'board2:postUpdate' post.pk %}">수정</a></button>
+<button><a href="{% url 'board2:postDelte' post.pk %}">삭제</a></button>
+<button><a href="{% url 'board2:postList' %}">목록으로</a></button>
