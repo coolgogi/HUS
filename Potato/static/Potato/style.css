@@ -1,0 +1,31 @@
+table{
+    width: 80%;
+    position: fixed;
+    left: 10%;
+    /* display: block; */
+}
+table, tbody, td, th{
+    border : 1px solid green;
+    border-collapse : collapse;
+}
+.submit{
+    color : green;
+    border: 1ps solid green;
+}
+input{
+    border : none;
+}
+textarea{
+    border : none;
+}
+.fixed {
+    position: fixed;
+    bottom: 50px;
+    right: 50%;
+    width: 200px;
+    background-color: white;
+}
+h1{
+    color: green;
+    text-align: center;
+}
